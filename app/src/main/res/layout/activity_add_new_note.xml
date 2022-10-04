@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddNewNoteActivity"
+    android:background="@color/purple_500">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/note_image_card_view"
+        app:cardCornerRadius="16dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#343846">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_image_24"
+                android:layout_centerInParent="true"
+                android:onClick="openGallery"
+                android:id="@+id/noteImage"
+                android:scaleType="centerCrop"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:hint="Add Title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/note_image_card_view"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/noteTitleEditText"
+        android:background="@drawable/edit_text_custom_background"
+        android:paddingLeft="8dp"
+        android:layout_marginRight="10dp"
+        android:drawableRight="@drawable/ic_baseline_edit_24"/>
+    <TextView
+        android:id="@+id/noteLocationTextView"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:hint="Add Location"
+        app:layout_constraintTop_toBottomOf="@+id/noteTitleEditText"
+        app:layout_constraintLeft_toRightOf="@id/note_image_card_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@drawable/ic_baseline_location_on_24"
+        android:background="@drawable/edit_text_custom_background"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:layout_marginRight="10dp"
+        android:paddingRight="8dp"/>
+    <TextView
+        android:editable="false"
+        android:id="@+id/noteAudio_text_view"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:hint="Add audio file"
+        app:layout_constraintTop_toBottomOf="@+id/noteLocationTextView"
+        app:layout_constraintLeft_toRightOf="@+id/note_image_card_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@drawable/ic_baseline_play_circle_24"
+        android:background="@drawable/edit_text_custom_background"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:layout_marginRight="10dp"
+        android:onClick="selectAudio"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="Long Description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteAudio_text_view"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/edit_text_custom_background"
+        android:id="@+id/notesLongDescriptionEditText"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_submit_note_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notesLongDescriptionEditText"
+        android:layout_marginTop="20dp"
+        android:text="SUBMIT"
+        android:id="@+id/btnSubmitNote"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
