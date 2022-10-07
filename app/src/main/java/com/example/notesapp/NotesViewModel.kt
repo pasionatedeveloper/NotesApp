@@ -23,6 +23,10 @@ class NotesViewModel(application: Application) : AndroidViewModel(application) {
     fun addNote(note: NoteEntity){
         repository.insertNotes(note)
     }
+    fun deleteNote (note: NoteEntity)  {
+        repository.deleteNotes(note)
+    }
+
 
 }
 

@@ -9,10 +9,23 @@
 
 
 
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/searchView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recyclerViewNotes"/>
+        android:layout_height="400dp"
+        android:id="@+id/recyclerViewNotes"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        android:layout_marginTop="50dp"
+        android:text="Search"/>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -28,5 +41,20 @@
         android:scaleType="centerCrop"
         app:backgroundTint="@color/purple_200"/>
 
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintRight_toRightOf="parent"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/recyclerViewNotes"
+        ads:adUnitId="@string/admob_banner_id">
+    </com.google.android.gms.ads.AdView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:cardCornerRadius="8dp"
         android:layout_margin="10dp"
-        android:background="@color/purple_500">
+        android:background="@color/purple_500"
+        android:id="@+id/card_view_id">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -79,6 +80,14 @@
 
     </androidx.cardview.widget.CardView>
 
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_id"
+        android:background="@color/purple_500"
+        android:src="@drawable/ic_baseline_delete_24"
+        android:id="@+id/deleteIcon"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
